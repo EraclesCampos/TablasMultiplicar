@@ -29,7 +29,7 @@
                         echo "</table>";
                     } 
                     else {
-                        echo "<h2>Por favor ingresa un numero</h2>";
+                        echo "<h2>Por favor ingresa un numero valido</h2>";
                     }
                 }
             ?>
