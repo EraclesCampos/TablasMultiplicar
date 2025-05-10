@@ -14,9 +14,11 @@
             <input type="number" name="number" id="form-input-number" required>
             <input type="submit" id="form-input-submit" value="Generar tabla">
         </form>
+        <?php
+            if(isset($_POST["number"])){
+        ?>
         <div class="result-container">
             <?php 
-                if(isset($_POST["number"])){
                     $number = (int)$_POST["number"];
                     if($number > 0){
                         echo "<h2>Tabla del $number</h2>";
@@ -31,9 +33,12 @@
                     else {
                         echo "<h2>Por favor ingresa un numero valido</h2>";
                     }
-                }
-            ?>
-        </div>
+                    ?>
+                </div>
+                <?php
+            }
+            else echo"<h3>Ingresa un numero para generar la tabla de multiplicar</h3>"
+        ?>
     </div>
 </body>
 </html>
